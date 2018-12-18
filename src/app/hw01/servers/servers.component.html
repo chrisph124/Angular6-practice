@@ -1,0 +1,31 @@
+<toggleBtn [buttonLabel]="label" (onToggleButton)="display($event)"></toggleBtn>
+<div *ngIf="isHWDisplay">
+  <app-server></app-server>
+  <div>
+    <button
+      class="btn btn-primary"
+      (click)="startTheGame()"
+      [disabled]="startBtnDisabled">
+        Start
+    </button>
+    <hr>
+    <div *ngIf="isClickBtnDisplay">
+      <button
+      class="btn btn-danger"
+      (click)="increment()">
+        Click to count!
+      </button>
+      <p class="margin" *ngIf="timeLeft">
+        {{timeLeft}} seconds left!!!
+      </p>
+      <hr class="hr" [ngClass]="clickedTotal.length > 0 ? 'show' : 'hidden'">
+    </div>
+    <div class="margin" [ngClass]="clickedTotal.length > 0 ? 'show' : 'hidden'">
+      <ul class="list-group margin">
+        <li class="list-group-item list-group-item-success" *ngFor="let element of clickedTotal">
+          You have clicked {{element.value}} times at {{element.time}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

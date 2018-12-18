@@ -1,0 +1,9 @@
+<div class="panel panel-default">
+  <div class="panel-heading">{{element.name}}</div>
+    <div class="panel-body">
+      <ng-container *ngIf="element.type; then typeServer else typeBlueprint"></ng-container>
+      <ng-template #typeServer><strong>{{element.content}}</strong></ng-template>
+      <ng-template #typeBlueprint><em>{{element.content}}</em></ng-template>
+    </div>
+  <br>
+</div>

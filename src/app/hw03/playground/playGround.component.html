@@ -1,0 +1,7 @@
+<toggleBtn [buttonLabel]="label" (onToggleButton)="display($event)"></toggleBtn>
+<div *ngIf="isHWDisplay">
+  <cockpit
+  (svCreated)="onServerAdded($event)"
+  (bpCreated)="onBlueprintAdded($event)"></cockpit>
+  <server-element *ngFor="let serverElement of serverElements" [srvElement]="serverElement"></server-element>
+</div>

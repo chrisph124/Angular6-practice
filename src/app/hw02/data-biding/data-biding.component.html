@@ -1,0 +1,6 @@
+<toggleBtn [buttonLabel]="label" (onToggleButton)="display($event)"></toggleBtn>
+<div *ngIf="isHWDisplay">
+<input type="text" [(ngModel)]="bidingData">
+<p>{{bidingData}}</p>
+<hr>
+</div>

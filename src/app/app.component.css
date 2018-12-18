@@ -1,0 +1,42 @@
+.text-center {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 25%;
+  margin: auto;
+}
+
+.hidden {
+  display: hidden !important;
+}
+
+.show {
+  display: block;
+  margin: 0 auto;
+  padding: 1%;
+}
+
+.margin {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+.list-group-item-success {
+  width: 25%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.list-group-item-success:first-child {
+  margin-top: 10px;
+}
+
+p {
+  color: darkgreen
+}
+
+.hw {
+  margin: 1%;
+}
